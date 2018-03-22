@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour {
 
-    [SerializeField] List<WayPoint> path;
+    [SerializeField] List<Waypoint> path;
 
 	// Use this for initialization
 	void Start () {
@@ -16,7 +16,7 @@ public class EnemyMovement : MonoBehaviour {
     {
         print("Starting patrol...");
 
-        foreach (WayPoint waypoint in path)
+        foreach (Waypoint waypoint in path)
         {
             transform.position = waypoint.transform.position;
             print("Visting block: " + waypoint.name);
