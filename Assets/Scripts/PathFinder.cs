@@ -60,7 +60,6 @@ public class PathFinder : MonoBehaviour {
     {
         if (searchCenter == endWaypoint)
         {
-            print("Found end point");
             isRunning = false;
         }
     }
