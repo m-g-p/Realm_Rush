@@ -660,7 +660,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b40c4ee7aa78854e8f0bc517536277d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridSide: 10
 --- !u!114 &114947380654886040
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -672,3 +671,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0219f61d0d6fbf4b81c6d600e7f35a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isExplored: 0
+  exploredFrom: {fileID: 0}
