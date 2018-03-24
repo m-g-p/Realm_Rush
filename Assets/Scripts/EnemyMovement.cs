@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour {
 
-	// Use this for initialization
 	void Start () {
         PathFinder pathfinder = FindObjectOfType<PathFinder>();
         var path = pathfinder.GetPath();
@@ -15,7 +14,6 @@ public class EnemyMovement : MonoBehaviour {
 
     IEnumerator FollowPath(List<Waypoint> path)
     {
-        //print("Starting patrol...");
 
         foreach (Waypoint waypoint in path)
         {
@@ -23,7 +21,6 @@ public class EnemyMovement : MonoBehaviour {
             yield return new WaitForSeconds(2f);
         }
 
-        //print("Ending patrol!");
     }
 
 

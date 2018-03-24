@@ -9,7 +9,6 @@ public class Waypoint : MonoBehaviour {
     public Waypoint exploredFrom;
     public bool isPlaceable = true;
 
-    [SerializeField] Tower towerPrefab;
 
     Vector2Int gridPos;
 
@@ -28,19 +27,11 @@ public class Waypoint : MonoBehaviour {
         );
     }
 
-    //public void SetTopColor(Color color)
-    //{
-    //    MeshRenderer topMeshRenderer = transform.Find("Top").GetComponent<MeshRenderer>();
-    //    topMeshRenderer.material.color = color;
-    //}
-
     void OnMouseOver()
     {
         if (Input.GetMouseButtonDown(0) && isPlaceable)
         {
-            Instantiate(towerPrefab, transform.position, Quaternion.identity);
-            print("Tower placed at: " + gameObject.name);
-            isPlaceable = false;
+            FindObjectOfType<TowerFactory>().AddTower(this); 
         }
         
     }

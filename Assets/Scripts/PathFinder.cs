@@ -33,7 +33,6 @@ public class PathFinder : MonoBehaviour {
     private void CalculatePath()
     {
         LoadBlocks();
-       //ColorStartAndEnd();
         BreadthFirstSearch();
         CreatePath();
     }
@@ -109,13 +108,6 @@ public class PathFinder : MonoBehaviour {
             neighbour.exploredFrom = searchCenter;
         }
     }
-
-
-    //private void ColorStartAndEnd()
-    //{
-    //    startWaypoint.SetTopColor(Color.green);
-    //    endWaypoint.SetTopColor(Color.red);
-    //}
 
     private void LoadBlocks()
     {

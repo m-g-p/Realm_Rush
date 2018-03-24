@@ -63,7 +63,6 @@ public class Tower : MonoBehaviour {
 
         if (rangeToEnemy <= attackRange)
         {
-           // print("Target in range of tower: " + rangeToEnemy);
             SetTowerActive(true);
         }
         else
