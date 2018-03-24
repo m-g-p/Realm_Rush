@@ -32,6 +32,10 @@ public class Waypoint : MonoBehaviour {
 
     void OnMouseOver()
     {
-        print(gameObject.name);
+        if (Input.GetMouseButtonDown(0))
+        {
+            print(gameObject.name + " clicked");
+        }
+        
     }
 }
