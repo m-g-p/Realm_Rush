@@ -2118,7 +2118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   secondsBetweenSpawns: 5
-  enemyPrefab: {fileID: 114467718412809356, guid: 74b6a7589f661ca4eb71ebb6a6942e45,
+  enemyPrefab: {fileID: 114667427963360174, guid: 04f81ff9814844ccfa08226f8d46a3f4,
     type: 2}
 --- !u!4 &1139185748 stripped
 Transform:
