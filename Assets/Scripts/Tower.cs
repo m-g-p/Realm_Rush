@@ -31,19 +31,6 @@ public class Tower : MonoBehaviour {
         targetEnemy = closestEnemy;
     }
 
-    private Transform GetClosest(Transform transformA, Transform transformB)
-    {
-        var distanceToA = Vector3.Distance(transform.position, transformA.position);
-        var distanceToB = Vector3.Distance(transform.position, transformB.position);
-
-        if(distanceToA < distanceToB)
-        {
-            return transformA;
-        }
-
-        return transformB; 
-    }
-
     private void FireAtEnemy()
     {
         if (targetEnemy)
@@ -55,6 +42,19 @@ public class Tower : MonoBehaviour {
         {
             SetTowerActive(false);
         }
+    }
+
+    private Transform GetClosest(Transform transformA, Transform transformB)
+    {
+        var distanceToA = Vector3.Distance(transform.position, transformA.position);
+        var distanceToB = Vector3.Distance(transform.position, transformB.position);
+
+        if(distanceToA < distanceToB)
+        {
+            return transformA;
+        }
+
+        return transformB; 
     }
 
     private void RangeChecker()

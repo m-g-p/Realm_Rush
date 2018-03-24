@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,6 +8,8 @@ public class Waypoint : MonoBehaviour {
     public bool isExplored = false;
     public Waypoint exploredFrom;
     public bool isPlaceable = true;
+
+    [SerializeField] Tower towerPrefab;
 
     Vector2Int gridPos;
 
@@ -35,7 +38,9 @@ public class Waypoint : MonoBehaviour {
     {
         if (Input.GetMouseButtonDown(0) && isPlaceable)
         {
-            print("Tower can be placed :" + gameObject.name);
+            Instantiate(towerPrefab, transform.position, Quaternion.identity);
+            print("Tower placed at: " + gameObject.name);
+            isPlaceable = false;
         }
         
     }
