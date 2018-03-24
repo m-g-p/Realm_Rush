@@ -5,7 +5,10 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour {
 
-	void Start () {
+    [SerializeField] float movementPeriod = .5f;
+    [SerializeField] ParticleSystem selfDestructParticlePrefab;
+
+    void Start () {
         PathFinder pathfinder = FindObjectOfType<PathFinder>();
         var path = pathfinder.GetPath();
         StartCoroutine(FollowPath(path));
@@ -18,10 +21,20 @@ public class EnemyMovement : MonoBehaviour {
         foreach (Waypoint waypoint in path)
         {
             transform.position = waypoint.transform.position;
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(movementPeriod);
         }
 
+        SelfDestruct();
     }
 
+    void SelfDestruct()
+    {
+        var vfx = Instantiate(selfDestructParticlePrefab, transform.position, Quaternion.identity);
+        vfx.Play();
+        Destroy(vfx.gameObject, vfx.main.duration);
+
+        Destroy(gameObject);
+
+    }
 
 }
