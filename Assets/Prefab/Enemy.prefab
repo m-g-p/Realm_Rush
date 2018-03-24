@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4250701854657278}
   - component: {fileID: 114467718412809356}
   - component: {fileID: 114009937333640822}
+  - component: {fileID: 54604575497891162}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -38,7 +39,6 @@ GameObject:
   - component: {fileID: 4239702117047912}
   - component: {fileID: 33811790051675548}
   - component: {fileID: 23528760497013526}
-  - component: {fileID: 54239389916320488}
   - component: {fileID: 65939864528073242}
   m_Layer: 0
   m_Name: Body
@@ -115,12 +115,12 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1270584414133698}
   m_Mesh: {fileID: 4300000, guid: 042c32b34794f584aa882ba5397f2c19, type: 3}
---- !u!54 &54239389916320488
+--- !u!54 &54604575497891162
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1270584414133698}
+  m_GameObject: {fileID: 1016300871228850}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -129,7 +129,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
 --- !u!65 &65939864528073242
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -154,6 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionMesh: {fileID: 65939864528073242}
+  hitPoints: 25
 --- !u!114 &114467718412809356
 MonoBehaviour:
   m_ObjectHideFlags: 1
