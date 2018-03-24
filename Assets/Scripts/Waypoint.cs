@@ -6,6 +6,7 @@ public class Waypoint : MonoBehaviour {
 
     public bool isExplored = false;
     public Waypoint exploredFrom;
+    public bool isPlaceable = true;
 
     Vector2Int gridPos;
 
@@ -24,17 +25,17 @@ public class Waypoint : MonoBehaviour {
         );
     }
 
-    public void SetTopColor(Color color)
-    {
-        MeshRenderer topMeshRenderer = transform.Find("Top").GetComponent<MeshRenderer>();
-        topMeshRenderer.material.color = color;
-    }
+    //public void SetTopColor(Color color)
+    //{
+    //    MeshRenderer topMeshRenderer = transform.Find("Top").GetComponent<MeshRenderer>();
+    //    topMeshRenderer.material.color = color;
+    //}
 
     void OnMouseOver()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && isPlaceable)
         {
-            print(gameObject.name + " clicked");
+            print("Tower can be placed :" + gameObject.name);
         }
         
     }
