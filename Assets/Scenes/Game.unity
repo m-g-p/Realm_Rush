@@ -2793,6 +2793,31 @@ MonoBehaviour:
   isExplored: 0
   exploredFrom: {fileID: 0}
   isPlaceable: 1
+--- !u!65 &1370733577
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1370733574}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.7828655, y: 14.079906, z: 11.794705}
+  m_Center: {x: -15.65123, y: 30.878485, z: -13.495895}
+--- !u!114 &1370733578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1370733574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3d6afbd5e364704685a9ce87d98ba90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: 10
+  enemyHitDamage: 2
 --- !u!1001 &1426248316
 Prefab:
   m_ObjectHideFlags: 0
